@@ -1,0 +1,1 @@
+ps -aux | grep ssh | grep tty | kill `awk '{print $2}'`

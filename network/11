@@ -1,0 +1,1 @@
+traceroute slash16.org | awk '/ 1 / {print $2 $3}' A RETIRER

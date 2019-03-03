@@ -1,1 +1,1 @@
-nslookup slash16.org | awk '/Address: / {print $2}'
+nslookup slash16.org | awk '/Address: / {print $2}' | head -n 1

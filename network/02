@@ -1,1 +1,2 @@
-ifconfig en0 inet | awk '/inet/ {print $2}'
+ifconfig en0 | grep broadcast | awk '{print $6}'
+

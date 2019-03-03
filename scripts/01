@@ -1,0 +1,9 @@
+#!/bin/bash
+input="/etc/passwd"
+while IFS= read -r line; do
+	case "$line" in \#*) continue ;; esac
+	t_login=`echo $line | cut -d: -f1`;
+	t_uid=`echo $line | cut -d: -f3`;
+	t_path=`echo $line | rev | cut -d: -f2 | rev`;
+	echo "$t_login $t_uid $t_path";
+done < $input
